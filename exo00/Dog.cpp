@@ -6,7 +6,7 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 02:23:06 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/03 04:53:23 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/04 15:47:27 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 					std::cout << "Constructeur du chien" << std::endl;
 				}
 				
-    Dog::Dog(const Dog& other)
+    Dog::Dog(const Dog& other) : Animal(other)
 				{
 							std::cout << "Dog copy constructo called" << std::endl;
 							*this = other;

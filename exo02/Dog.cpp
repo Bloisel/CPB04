@@ -6,7 +6,7 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 02:23:06 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/04 16:56:09 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/04 15:58:57 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,12 +47,6 @@ void Dog::makeSound() const
 {
     std::cout << "Dog: Woof Woof!" << std::endl;
 }
-
-
-
-
-
-
 
 Brain* Dog::getBrain() const 
 {

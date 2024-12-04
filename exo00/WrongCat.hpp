@@ -6,7 +6,7 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 04:31:16 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/03 05:02:24 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/04 15:38:45 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ class WrongCat : public WrongAnimal
 {
 public:
     WrongCat();
-    WrongCat(std::string nameT);
     WrongCat(const WrongCat& other);
     WrongCat& operator=(const WrongCat& other);
     virtual ~WrongCat();

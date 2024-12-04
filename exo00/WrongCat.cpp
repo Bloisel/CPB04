@@ -6,7 +6,7 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 04:31:14 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/03 05:01:45 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/04 15:46:50 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 					std::cout << "Constructeur du WrongCat" << std::endl;
 				}
 				
-    WrongCat::WrongCat(const WrongCat& other)
+    WrongCat::WrongCat(const WrongCat& other) : WrongAnimal(other)
 				{
 							std::cout << "WrongCat copy constructo called" << std::endl;
 							*this = other;

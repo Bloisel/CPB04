@@ -6,7 +6,7 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 02:23:19 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/04 04:39:43 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/04 16:58:01 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,10 @@ public:
     Dog& operator=(const Dog& other);
     ~Dog();
 	virtual void makeSound()const;
-	virtual std::string getType( void ) const;
+	// virtual std::string getType( void ) const;
     
+    void setterCerveau() const;
+    void getterCerveau() const; 
     Brain* getBrain() const;
 };
 
