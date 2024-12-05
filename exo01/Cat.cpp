@@ -6,7 +6,7 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 02:23:06 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/04 15:27:57 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/05 13:55:51 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,14 @@
 
  Cat::Cat() : Animal("Cat") 
 {
+    std::cout << "Constructeur CAT defaut" << std::endl;
     brain = new Brain();
-    std::cout << "Constructeur defaut Cat" << std::endl;
   
 }
 
 Cat::Cat(const Cat& other) : Animal(other) 
 {
+    std::cout << "copy CAT constructor called " << std::endl;
     this->brain = new Brain(*other.brain); // deep copy 
     
    
@@ -45,7 +46,7 @@ garantit que chaque objet Cat a sa propre copie indépendante de l'objet Brain, 
 
 Cat& Cat::operator=(const Cat& other) 
 {
-    std::cout << "copy assignement constructr called " << std::endl;
+    std::cout << "copy assignement CAT operator called " << std::endl;
     if (this != &other)
     {
         this->_type = other._type;
@@ -58,7 +59,7 @@ Cat& Cat::operator=(const Cat& other)
 
 Cat::~Cat() 
 {
-    delete brain;
+    delete this->brain;
     std::cout << "Cat: Destructor called" << std::endl;
 }
 
@@ -67,7 +68,24 @@ void Cat::makeSound() const
     std::cout << "Cat: Meow Meow!" << std::endl;
 }
 
-Brain* Cat::getBrain() const 
+void Cat::SetideaBrain() const
 {
-    return brain;
-} 
+     if (this->brain == nullptr) {
+        std::cerr << "Error: brain is nullptr in SetideaBrain!" << std::endl;
+        return;
+    }
+    this->brain->setIdea("je mappelle nouka", 0);
+    this->brain->setIdea("je mapelle Adil", 1);
+    for (unsigned int i = 2; i < 6; i++)
+    {
+        this->brain->setIdea("loop testing", i);
+    }    
+}
+
+void Cat::IdeaBrain() const
+{
+    for (unsigned int i = 0; i < 6; i++)
+    {
+        std::cout << this->brain->getIdea(i) << std::endl;
+    }
+}

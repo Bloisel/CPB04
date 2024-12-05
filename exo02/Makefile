@@ -6,13 +6,13 @@
 #    By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/30 06:04:51 by bloisel           #+#    #+#              #
-#    Updated: 2024/12/04 15:35:31 by bloisel          ###   ########.fr        #
+#    Updated: 2024/12/05 14:11:43 by bloisel          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-SRC =  main.cpp Animal.cpp  WrongAnimal.cpp WrongCat.cpp  Brain.cpp Cat.cpp Dog.cpp 
-NAME =	Animal
+SRC =  main.cpp AAnimal.cpp  WrongAnimal.cpp WrongCat.cpp  Brain.cpp Cat.cpp Dog.cpp 
+NAME =	AAnimal
 CC = c++ -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)

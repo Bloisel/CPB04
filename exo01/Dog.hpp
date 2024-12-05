@@ -6,7 +6,7 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 02:23:19 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/04 16:58:01 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/05 13:59:35 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,13 @@ public:
     ~Dog();
 	virtual void makeSound()const;
 	// virtual std::string getType( void ) const;
+
+    void IdeaBrain() const;
+    void SetideaBrain() const;
+     
+    // void setterCerveau() const;
+    // void getterCerveau() const; 
     
-    void setterCerveau() const;
-    void getterCerveau() const; 
-    Brain* getBrain() const;
 };
 
 

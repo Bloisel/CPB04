@@ -6,33 +6,33 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 04:47:25 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/03 04:50:42 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/05 14:10:37 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_H
-#define ANIMAL_H
+#ifndef AANIMAL_HPP
+#define AANIMAL_HPP
 
-#include <string>
 #include <iostream>
+#include <string>
 
-class Animal 
-{
+class AAnimal {
 protected:
     std::string _type;
 
 public:
-    Animal();
-    Animal(std::string nameT);
-    Animal(const Animal& other);
-    Animal& operator=(const Animal& other);
-    virtual ~Animal();
-    virtual void makeSound()const;
-    virtual std::string getType( void ) const;
-    
+    // Constructeurs et destructeur
+    AAnimal();
+    AAnimal(const std::string& type);
+    AAnimal(const AAnimal& other);
+    virtual ~AAnimal(); // Virtual destructor obligatoire pour une classe abstraite
+
+    // Opérateur d'assignation
+    AAnimal& operator=(const AAnimal& other);
+
+    // Méthodes
+    virtual void makeSound() const = 0; // Méthode virtuelle pure
+    std::string getType() const;
 };
-
-
-
 
 #endif

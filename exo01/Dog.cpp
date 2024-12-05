@@ -6,7 +6,7 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 02:23:06 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/04 16:56:09 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/05 14:00:16 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,21 +14,20 @@
 
 Dog::Dog() : Animal("Dog") 
 {
+    std::cout << "default DOG consturcotr called " << std::endl;
     this->brain = new Brain();
-    std::cout << "default consturcotr called" << std::endl;
     
 }
 
 Dog::Dog(const Dog& other) : Animal(other) 
 {
+    std::cout << "Copy DOG constructeur called " << std::endl;
     this->brain = new Brain(*other.brain);
-    std::cout << "Copy constructeur called " << std::endl;
-   
 }
 
 Dog& Dog::operator=(const Dog& other) 
 {
-    std::cout << "Copy assignement constructor called" << std::endl;
+    std::cout << "Copy assignement DOG operator called" << std::endl;
    if (this != &other)
    {
         delete brain;
@@ -48,13 +47,30 @@ void Dog::makeSound() const
     std::cout << "Dog: Woof Woof!" << std::endl;
 }
 
-
-
-
-
-
-
-Brain* Dog::getBrain() const 
+void Dog::SetideaBrain() const
 {
-    return brain;
+     if (this->brain == nullptr) {
+        std::cerr << "Error: brain is nullptr in SetideaBrain!" << std::endl;
+        return;
+    }
+    this->brain->setIdea("je mappelle DOG", 0);
+    this->brain->setIdea("je mapelle DMX WAOUHHH where the hood at", 1);
+    for (unsigned int i = 2; i < 6; i++)
+    {
+        this->brain->setIdea("loop testing", i);
+    }    
 }
+
+void Dog::IdeaBrain() const
+{
+    for (unsigned int i = 0; i < 6; i++)
+    {
+        std::cout << this->brain->getIdea(i) << std::endl;
+    }
+}
+
+
+
+
+
+

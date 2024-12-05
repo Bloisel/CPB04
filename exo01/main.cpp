@@ -6,7 +6,7 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 04:47:27 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/04 16:47:12 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/05 13:58:29 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ int main()
       delete nouka[x];
       std::cout <<" ____________________________________________________________________ " << std::endl; 
    }
-   std::cout << " Test main de l'exo " << std::endl;
+   std::cout << "_______________________________________[TEST MAIN DONNE DANS LE SUJET ____________________________________________] " << std::endl;
    const Animal* j = new Dog();
    const Animal* i = new Cat();
    delete j;//should not create a leak
@@ -69,8 +69,21 @@ int main()
    h->getType();
    h->makeSound();
    delete h;
-   Dog *test = new Dog();
-   test->getBrain();
-   test.set
-    
+   std::cout <<" ____________________________________________________________________ " << std::endl; 
+   Cat* test = new Cat();
+   test->SetideaBrain();
+   test->IdeaBrain();
+   std::cout <<" ____________________________________________________________________ " << std::endl;
+   Cat b = (*test);
+   std::cout <<" ____________________________________________________________________ " << std::endl; 
+   std::cout << "Type of b: " << b.getType() << std::endl;
+
+   std::cout << "Modifying b's brain" << std::endl;
+   b.SetideaBrain();
+   std::cout << "Displaying b's ideas" << std::endl;
+   b.IdeaBrain();
+
+   delete test; 
+   std::cout << "Deleted test, b should remain unaffected" << std::endl; 
+   
 }

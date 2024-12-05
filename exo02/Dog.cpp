@@ -6,20 +6,20 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 02:23:06 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/04 15:58:57 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/05 14:14:19 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 
-Dog::Dog() : Animal("Dog") 
+Dog::Dog() : AAnimal("Dog") 
 {
     this->brain = new Brain();
     std::cout << "default consturcotr called" << std::endl;
     
 }
 
-Dog::Dog(const Dog& other) : Animal(other) 
+Dog::Dog(const Dog& other) : AAnimal(other) 
 {
     this->brain = new Brain(*other.brain);
     std::cout << "Copy constructeur called " << std::endl;

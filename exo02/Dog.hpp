@@ -6,19 +6,19 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 02:23:19 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/04 15:48:48 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/05 14:12:39 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef DOG_H
 #define DOG_H
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Brain.hpp"
 #include <string>
 #include <iostream>
 
-class Dog : public Animal
+class Dog : public AAnimal
 {
 
 private:

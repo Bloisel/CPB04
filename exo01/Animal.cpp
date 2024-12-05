@@ -6,7 +6,7 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 04:47:23 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/03 04:52:30 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/05 13:26:51 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 
 				Animal::Animal(std::string nameT) : _type(nameT)
 				{
-						std::cout << "constructor called with type " << _type << std::endl;
+						std::cout << "constructor Animal called with type " << _type << std::endl;
 				}
 					
     Animal::Animal(const Animal& other)

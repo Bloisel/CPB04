@@ -6,7 +6,7 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 02:23:06 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/04 15:48:42 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/05 13:51:27 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,8 +32,9 @@ public:
     ~Cat();
 	virtual void makeSound()const;
 	// virtual std::string getType( void ) const;
-
-    Brain* getBrain()const;
+    void IdeaBrain() const;
+    void SetideaBrain() const;
+    
 };
 
 

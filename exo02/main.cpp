@@ -6,39 +6,55 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 04:47:27 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/04 15:57:54 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/05 14:23:42 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
 #include "Brain.hpp"
-
-// #include "Dog.hpp"
-// #include "Cat.hpp"
 #include <iostream>
 
 int main() 
 {
-   // Brain a;
-   
-   // Brain b(a);
-   // b.setIdea("je mapelle donald", 0);
-   // b.getIdea(0);
-   // std::cout << "get idea pour b apres copy " << b.getIdea(0) << std::endl;
-   // Brain c = b;
-   // std::cout << "get idea de c assignement " << c.getIdea(0) << std::endl;
-   Animal   *nouka[10]; 
-   for (int i = 0; i < 3 ; i++)
+   AAnimal   *nouka[10];
+   std::cout <<" ____________________________________________________________________ " << std::endl; 
+   for (int i = 0; i < 10; i++)
    {
-      nouka[i] = new Dog;
+      if (i < 5)
+      {
+         nouka[i] = new Dog;
+         if (nouka[i] == NULL)
+         {
+            std::cout << "NULL" << std::endl;
+            return (0);
+         }
+         std::cout <<" ____________________________________________________________________ " << std::endl; 
+      }
+      else
+      {
+         nouka[i] = new Cat;
+         if (nouka[i] == NULL)
+         {
+            std::cout << "NULL" << std::endl;
+            return (0);
+         }
+         std::cout <<" ____________________________________________________________________ " << std::endl; 
+      }
    }
-   return (0);
-   for (int i = 0; i < 3; i++)
-   {
-      delete nouka[i];
-   } 
+   // std::cout << "test non instanciable " << std::endl;
+   // AAnimal a;  
+   std::cout <<" ____________________________________________________________________ " << std::endl; 
+
+   AAnimal* test = new Dog();
+   test->getType();
+   test->makeSound();
+
+   delete test;
+
+   AAnimal *test2 = new Cat();
+   
 }
