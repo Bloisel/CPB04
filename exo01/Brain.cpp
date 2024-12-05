@@ -6,7 +6,7 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 05:32:22 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/05 16:06:34 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/05 17:39:08 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,11 +50,6 @@ Brain& Brain::operator=(const Brain& other)
 Brain::~Brain() 
 {
     std::cout << "Brain: Destructor called" << std::endl;
-}
-
-void Brain::CheckAdressdeepcopy()
-{
-		std::cout << "void for the moment " << std::endl;	
 }
 
 

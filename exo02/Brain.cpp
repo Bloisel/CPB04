@@ -6,7 +6,7 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 05:32:22 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/04 15:46:29 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/05 17:39:17 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,12 +51,6 @@ Brain::~Brain()
 {
     std::cout << "Brain: Destructor called" << std::endl;
 }
-
-void Brain::CheckAdressdeepcopy()
-{
-		std::cout << "void for the moment " << std::endl;	
-}
-
 
 void Brain::setIdea(const std::string& idee, unsigned int index) 
 {
