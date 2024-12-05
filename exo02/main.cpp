@@ -6,7 +6,7 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 04:47:27 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/05 14:23:42 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/05 17:17:34 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,5 +56,9 @@ int main()
    delete test;
 
    AAnimal *test2 = new Cat();
+   test2->getType();
+   test2->makeSound();
+
+   delete test2;
    
 }

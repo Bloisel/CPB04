@@ -6,7 +6,7 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 05:32:22 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/04 15:46:29 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/05 16:06:34 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,15 +19,15 @@ Brain::Brain()
 
 Brain::Brain(const Brain& other) 
 {
-		std::cout << "Brain copy constructor called" << std::endl;
+		std::cout << "Brain copy constructor called for Brain " << std::endl;
 		std::cout << "_______________________________________________" << std::endl;
-		std::cout << "adress current object " << this << std::endl;
+		std::cout << "adress current object Brain " << this << std::endl;
 		std::cout << "_______________________________________________" << std::endl;
-		std::cout << "adress parameter object " << &other << std::endl;
+		std::cout << "adress parameter object Brain " << &other << std::endl;
 		std::cout << "_______________________________________________" << std::endl;
 		*this = other;
-		std::cout << "adress current object " << this << std::endl;
-		std::cout << "adress parameter object " << &other << std::endl;
+		std::cout << "adress current object Brain " << this << std::endl;
+		std::cout << "adress parameter object Brain " << &other << std::endl;
 }
 
 Brain& Brain::operator=(const Brain& other) 
@@ -41,8 +41,8 @@ Brain& Brain::operator=(const Brain& other)
 	{
 			this->ideas[i] = other.ideas[i];
 	}
-	std::cout << "adress current object " << this << std::endl;
-	std::cout << "adress parameter object " << &other << std::endl;
+	std::cout << "adress current object Brain " << this << std::endl;
+	std::cout << "adress parameter object Brain " << &other << std::endl;
 	return *this;
     
 }

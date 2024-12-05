@@ -6,7 +6,7 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 02:23:06 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/05 14:14:29 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/05 16:05:13 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,21 +26,6 @@ Cat::Cat(const Cat& other) : AAnimal(other)
     
    
 }
-
-/* brain = new Brain(*other.brain);
-
-copie profonde de l'objet Brain pointé par other.brain.
-
-other.brain est un pointeur vers un objet Brain.
-
-*other.brain déréférence ce pointeur pour accéder à l'objet réel (une instance de la classe Brain).
-
-new Brain(*other.brain) crée un nouvel objet Brain en copiant celui pointé par other.brain, grâce au constructeur de copie de Brain.
-
-Le pointeur brain de l'objet en cours de construction est alors initialisé pour pointer vers cette nouvelle instance.
-
-garantit que chaque objet Cat a sa propre copie indépendante de l'objet Brain, plutôt que de partager un même pointeur. */
-
 
 
 Cat& Cat::operator=(const Cat& other) 

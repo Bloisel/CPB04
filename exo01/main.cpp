@@ -6,7 +6,7 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 04:47:27 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/05 13:58:29 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/05 16:01:10 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,14 +76,18 @@ int main()
    std::cout <<" ____________________________________________________________________ " << std::endl;
    Cat b = (*test);
    std::cout <<" ____________________________________________________________________ " << std::endl; 
-   std::cout << "Type of b: " << b.getType() << std::endl;
+   std::cout << "Type b: " << b.getType() << std::endl;
 
-   std::cout << "Modifying b's brain" << std::endl;
+   std::cout << "Modif b brain" << std::endl;
    b.SetideaBrain();
-   std::cout << "Displaying b's ideas" << std::endl;
+   std::cout << "Display b ideas" << std::endl;
    b.IdeaBrain();
 
    delete test; 
-   std::cout << "Deleted test, b should remain unaffected" << std::endl; 
+   std::cout << "Deleted test " << std::endl;
+   std::cout <<" ____________________________________________________________________ " << std::endl; 
+   Cat tst;
+   std::cout <<" ____________________________________________________________________ " << std::endl; 
+   Cat bibi(tst); 
    
 }

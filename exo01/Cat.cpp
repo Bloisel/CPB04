@@ -6,7 +6,7 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/03 02:23:06 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/05 13:55:51 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/05 17:01:03 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,26 +22,15 @@
 
 Cat::Cat(const Cat& other) : Animal(other) 
 {
+    //std::cout << "other.brain classique " << other.brain << std::endl; // ptr vers un Objet Brain dans other (adress du ptr)
+    //std::cout << "ref other de brain " << &other.brain << std::endl; // adresse de variable brain dans other 
     std::cout << "copy CAT constructor called " << std::endl;
-    this->brain = new Brain(*other.brain); // deep copy 
-    
+    this->brain = new Brain(*other.brain); // deep copy fait pointer this->brain vers nouvel objet Brain(a partir de *otherbrain obj Brain dands other) 
+    std::cout << "this brain "<< this->brain << std::endl;
+    // != d une shallow copy avec Brain mm adresse memoire 
+    // shallow copy auraity ressemble a un truc this->brain = other.brain pointe vers le mm objet Brain
    
 }
-
-/* brain = new Brain(*other.brain);
-
-copie profonde de l'objet Brain pointé par other.brain.
-
-other.brain est un pointeur vers un objet Brain.
-
-*other.brain déréférence ce pointeur pour accéder à l'objet réel (une instance de la classe Brain).
-
-new Brain(*other.brain) crée un nouvel objet Brain en copiant celui pointé par other.brain, grâce au constructeur de copie de Brain.
-
-Le pointeur brain de l'objet en cours de construction est alors initialisé pour pointer vers cette nouvelle instance.
-
-garantit que chaque objet Cat a sa propre copie indépendante de l'objet Brain, plutôt que de partager un même pointeur. */
-
 
 
 Cat& Cat::operator=(const Cat& other) 
@@ -49,7 +38,7 @@ Cat& Cat::operator=(const Cat& other)
     std::cout << "copy assignement CAT operator called " << std::endl;
     if (this != &other)
     {
-        this->_type = other._type;
+        //this->_type = other._type;
         delete brain;
         this->brain = new Brain(*other.brain);
     }

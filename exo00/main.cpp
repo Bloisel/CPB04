@@ -6,7 +6,7 @@
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 04:47:27 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/03 05:06:05 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/05 16:02:01 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,13 @@ int main()
     meta->makeSound();
     std::cout << "___________________________________________" << std::endl;
 
-    std::cout << "Testing methode virtuel a partir danimal(generique) pour dog redefinition par class derivee de  methode virtuelle overidiiiing " << std::endl;
+    std::cout << "Testing methode virtuel Polymorph" << std::endl;
     Animal* a = new Dog;
     std::cout << a->getType() << " " << std::endl;
     a->makeSound();
     std::cout << "___________________________________________" << std::endl;
     
-    std::cout << "Testing sans polymorph objet/ptr dog "<< std::endl;
+    std::cout << "Testing sans polymorph Dog pour Dog objet/ptr dog "<< std::endl;
     Dog* b = new Dog;
     std::cout << b->getType() << " " << std::endl;
     b->makeSound();

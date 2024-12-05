@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: bloisel <bloisel@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/30 04:47:25 by bloisel           #+#    #+#             */
-/*   Updated: 2024/12/05 14:10:37 by bloisel          ###   ########.fr       */
+/*   Updated: 2024/12/05 17:18:30 by bloisel          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,17 +21,17 @@ protected:
     std::string _type;
 
 public:
-    // Constructeurs et destructeur
+    
     AAnimal();
     AAnimal(const std::string& type);
     AAnimal(const AAnimal& other);
-    virtual ~AAnimal(); // Virtual destructor obligatoire pour une classe abstraite
+    virtual ~AAnimal(); 
 
-    // Opérateur d'assignation
+    
     AAnimal& operator=(const AAnimal& other);
 
-    // Méthodes
-    virtual void makeSound() const = 0; // Méthode virtuelle pure
+  
+    virtual void makeSound() const = 0; // Ma methode virtuelle pure
     std::string getType() const;
 };
 
